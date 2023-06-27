@@ -3,6 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+def homePath = System.properties['user.home']
+def localProps = new Properties()
+localProps.load(new File(homePath + '/Documents/private/key/app_props.properties').newDataInputStream())
+
 android {
     namespace 'app.peter.mots'
     compileSdk 33
@@ -15,6 +19,14 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+//        buildConfigField "String", "SEOUL_KEY",
+//                localProps.getProperty("SEOUL_KEY") ?: "\"NOT_FOUND\""
+        resValue("string", "seoul_key",
+                localProps.getProperty("SEOUL_KEY") ?: "\"NOT_FOUND\"")
+        resValue("string", "server_client_id",
+                localProps.getProperty("GOOGLE_AUTH_KEY") ?: "\"NOT_FOUND\"")
+
         vectorDrawables {
             useSupportLibrary true
         }
