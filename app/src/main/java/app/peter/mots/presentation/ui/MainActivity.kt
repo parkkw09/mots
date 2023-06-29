@@ -1,4 +1,4 @@
-package app.peter.mots
+package app.peter.mots.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import app.peter.mots.ui.theme.MidstOfTheSeoulTheme
+import app.peter.mots.presentation.ui.theme.MidstOfTheSeoulTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

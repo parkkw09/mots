@@ -1,4 +1,4 @@
-package app.peter.mots.ui.theme
+package app.peter.mots.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

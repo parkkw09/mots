@@ -1,4 +1,4 @@
-package app.peter.mots.ui.theme
+package app.peter.mots.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
